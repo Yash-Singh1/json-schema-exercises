@@ -1,0 +1,13 @@
+The type property inside JSON Schemas contain a string representing the expected type of the tested object. It can be one of:
+
+- null
+- string
+- number
+- array
+- object
+- boolean
+- integer
+
+It can also be an array representing a variety of types that are possible for the object. For more information go to JSON Schema's reference on the type property:
+
+https://json-schema.org/understanding-json-schema/reference/type.html

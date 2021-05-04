@@ -1,0 +1,8 @@
+The solution is the type array.
+The items are all type number.
+Since there isn't any exactLength property in JSON Schema, we combine minLength and maxLength.
+The uniqueItems property is a boolean that ensures that all the items are unique. By setting this to true, arrays like:
+
+[ 4, 5, 8, 4, 8 ... ]
+
+With repititions are not allowed.

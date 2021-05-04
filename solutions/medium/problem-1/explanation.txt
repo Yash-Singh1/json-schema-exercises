@@ -1,0 +1,3 @@
+The type of the input is of course an object. Now we need to specify the properties for this object. The required values are obviously lat and long, so the required property will be an array with strings that are lat and long.
+
+For the properties, we need the long property of "properties" to be a number and the same for lat. However, the we also need to specify a minimum of -90 and a maximum of 90 for lat. The minimum for long will be -180 and the maximum will be 180.

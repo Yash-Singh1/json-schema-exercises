@@ -1,0 +1,6 @@
+The following will match everything inside a JSON Schema from draft 6 ownwards:
+
+- {}
+- true
+
+There are multiple other complicated solutions, but these two are the shortest and the best. If you don't want to match anything then false is avaliable.

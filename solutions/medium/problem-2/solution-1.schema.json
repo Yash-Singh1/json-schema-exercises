@@ -1,0 +1,7 @@
+{
+  "type": "array",
+  "items": { "type": "number" },
+  "minLength": 100,
+  "maxLength": 100,
+  "uniqueItems": true
+}

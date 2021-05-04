@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "definitions": {
+    "transaction": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "price": {
+          "type": "number",
+          "minimum": 0,
+          "multipleOf": 0.01
+        },
+        "product": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "id": { "type": "number" }
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "odd": {
+      "type": "integer",
+      "not": { "multipleOf": 2 },
+      "exclusiveMinimum": 0
+    },
+    "color": {
+      "type": "string",
+      "enum": ["red", "green", "blue", "yellow"]
+    },
+    "transactions": {
+      "type": "object",
+      "patternProperties": {
+        "(\\d{2}/){2}\\d{2}": {
+          "type": "array",
+          "allOf": [
+            {
+              "items": [
+                {
+                  "allOf": [
+                    { "$ref": "#/definitions/transaction" },
+                    {
+                      "not": {
+                        "properties": { "toomuch": true },
+                        "required": ["toomuch"]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "allOf": [
+                    { "$ref": "#/definitions/transaction" },
+                    {
+                      "not": {
+                        "properties": { "toomuch": true },
+                        "required": ["toomuch"]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "items": { "$ref": "#/definitions/transaction" }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": ["odd", "color", "transactions"]
+}
