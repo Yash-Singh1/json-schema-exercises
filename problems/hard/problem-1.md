@@ -69,4 +69,4 @@ Here is an example:
 
 ## Solution
 
-Click [here](../../solutions/medium/problem-1/) to get the solutions.
+Click [here](../../solutions/hard/problem-1/) to get the solutions.
